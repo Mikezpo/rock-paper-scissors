@@ -21,3 +21,32 @@ const getUserChoice = userInput => {
       return 'scissors';
     }
   }
+
+  // determine the winner
+  
+  const determineWinner = (userChoice, computerChoice) => {
+    if (userChoice === 'bomb') {
+      return 'Winner winner chicken dinner!';
+    }
+    if (userChoice === computerChoice) {
+      return 'We have a tie! Try again.';
+    } else if (userChoice === 'rock') {
+        if (computerChoice === 'paper') {
+          return 'LOOOOSSEEEERRR!';
+        } else {
+          return 'Winner winner chicken dinner!';
+        }
+    }else if (userChoice === 'paper') {
+        if (computerChoice === 'scissors') {
+          return 'LOOOOSSEEEERRR!';
+        } else {
+          return 'Winner winner chicken dinner!';
+        }
+    } else if (userChoice === 'scissors') {
+        if (computerChoice === 'rock') {
+          return 'LOOOOSSEEEERRR!';
+        } else {
+          return 'Winner winner chicken dinner!';
+        }
+    }
+  }
